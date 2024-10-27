@@ -48,9 +48,9 @@ pipeline{
         stage('Push Docker Image'){
              steps{
                   withCredentials([string(credentialsId: 'DOCKER_HUB_CREDENTIALS', variable: 'DOCKER_HUB_CREDENTIALS')]) {
-                      sh "docker login -u Mahesh106 -p ${DOCKER_HUB_CREDENTIALS}"
+                      sh "docker login -u maheshdocker54 -p ${DOCKER_HUB_CREDENTIALS}"
             }
-            sh 'docker push Mahesh106/spring-boot-mongo'
+            sh 'docker push maheshdocker54/spring-boot-mongo'
         }
       }
         
